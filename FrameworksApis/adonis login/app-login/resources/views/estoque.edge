@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Adm</title>
+    {{ style ('stylefunc')}}
+</head>
+
+<body>
+    <div id="container">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <h3>ESTOQUE</h3>
+    <nav id="menu">
+        <ul>
+            
+            <li><a href="/casacos">Casacos</a></li>
+            <li><a href="/calcasEstoque">Calças</a></li>
+            <li><a href="/casacosEstoque">Casacos</a></li>
+         
+            <li><a href="/sair">Sair</a></li>
+            
+        </ul>
+    </nav>
+</header>
+	<h2>Controle de Estoque</h2>
+    <h2>Camisetas</h2>
+  
+
+    <section>
+        <form action = "/camisetasEstoque" method = "POST" class= "form_camisetaEstoque">
+            {{ csrfField() }}
+            <div>
+                <label for="marca_camisetaEstoque">Marca:</label>
+                <input type="text" id="marca_camisetaEstoque" name ="marca_camisetaEstoque">
+                <br><br>
+                <label for="tamanho_camisetaEstoque">Tamanho:</label>
+                <input type="text" id="tamanho_camisetaEstoque" name = "tamanho_camisetaEstoque">
+                <br><br>
+                <label for="qtd_camisetaEstoque">Quantidade:</label>
+                <input type="text" id="qtd_camisetaEstoque" name="qtd_camisetaEstoque">
+                <br><br>
+        
+            </div>
+            <br>
+            <div>
+                <button class = "button" type="submit">Adicionar</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h1>Lista de Camisetas</h1>
+        @each(camisetasEstoque in camisetasEstoque)
+               
+            <div>ID:
+            {{ (camisetasEstoque.id -1) }}
+            </div>
+            <div>Marca camiseta:    
+            {{ camisetasEstoque.marca_camisetaEstoque }}
+            </div>
+            <div>Tamanho camiseta:
+            {{ camisetasEstoque.tamanho_camisetaEstoque }}
+            </div>
+            <div>Quantidade:
+            {{ camisetasEstoque.qtd_camisetaEstoque }}
+            </div>
+          
+            <button class="button">
+            <a href="/camisetaEstoque-edite/{{camisetasEstoque.id}}" method = "GET" class="button">Editar</a>
+            </button>
+            <button class="button">
+            <a href="/deleteEstoque-camiseta/{{camisetasEstoque.id}}" method = "GET" class="button">Deletar</a>
+            </button>
+            @else
+                    <h1 class="tabela">Nenhuma tarefa foi criada ainda!</h1>
+            @endeach
+            </div> 
+        </section>  
+
+   
+    <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adm</title>
+    {{ style ('principal')}}
+</head>
+<body>
+    <div id="container">
+    <header class="headerRoupas">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+    
+            <a href="/calcas">Calças</a>
+            <a href="/camisetas">Camisetas</a>
+            <a href="/casacos">Casacos</a>
+            <a href="/sair">Sair</a>
+    </nav>
+    </header>
+</header>
+
+	<h2>Adicione um novo Casaco</h2>
+    <section>
+        <form action = "/casacos" method = "POST" class= "form_casacos">
+            {{ csrfField() }}
+            <div>
+                <label for="marca_casaco">Marca:</label>
+                <input type="text" id="marca_casaco" name ="marca_casaco">
+                <br><br>
+                <label for="tamanho_casaco">Tamanho:</label>
+                <input type="text" id="tamanho_casaco" name = "tamanho_casaco">
+                <br><br>
+                <label for="qtd_casaco">Quantidade:</label>
+                <input type="text" id="qtd_casaco" name="qtd_casaco">
+                <br><br>
+        
+            </div>
+            <br>
+            <div>
+                <button class = "button" type="submit">Adicionar</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h1>Lista de Casacos</h1>
+        @each(casacos in casacos)
+               
+            <div>ID:
+            {{ (casacos.id -1) }}
+            </div>
+            <div>Marca:    
+            {{ casacos.marca_casaco }}
+            </div>
+            <div>Tamanho:
+            {{ casacos.tamanho_casaco }}
+            </div>
+            <div>Quantidade:
+            {{ casacos.qtd_casaco }}
+            </div>
+          
+            <button class="button">
+            <a href="/casaco-edite/{{casacos.id}}" method = "GET" class="button">Editar</a>
+            </button>
+            <button class="button">
+            <a href="/delete-casaco/{{casacos.id}}" method = "GET" class="button">Deletar</a>
+            </button>
+            <br><br>
+            @else
+                    <h1 class="tabela">Nenhuma tarefa foi criada ainda!</h1>
+            @endeach
+            <br>
+            </div>    
+    </section>
+
+    <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

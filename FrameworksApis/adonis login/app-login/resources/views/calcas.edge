@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adm</title>
+    {{ style ('principal')}}
+</head>
+
+<body>
+    <div id="container">
+    <header class="headerRoupas">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+            <a href="/calcas">Calças</a>
+            <a href="/camisetas">Camisetas</a>
+            <a href="/casacos">Casacos</a>
+            <a href="/sair">Sair</a>
+    </nav>
+    </header>
+
+	<h2>Adicione uma nova Calca</h2>
+    <section>
+        <form action = "/calcas" method = "POST" class= "form_calcas">
+            {{ csrfField() }}
+            <div>
+                <label for="marca_calca">Marca:</label>
+                <input type="text" id="marca_calca" name ="marca_calca">
+                <br><br>
+                <label for="tamanho_calca">Tamanho:</label>
+                <input type="text" id="tamanho_calca" name = "tamanho_calca">
+                <br><br>
+                <label for="qtd_calca">Quantidade:</label>
+                <input type="text" id="qtd_calca" name="qtd_calca">
+                <br><br>
+        
+            </div>
+            <br>
+            <div>
+                <button class = "button" type="submit">Adicionar</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h1>Lista de Calcas</h1>
+        @each(calcas in calcas)
+               
+            <div>ID:
+            {{ (calcas.id -1) }}
+            </div>
+            <div>Marca:    
+            {{ calcas.marca_calca }}
+            </div>
+            <div>Tamanho:
+            {{ calcas.tamanho_calca }}
+            </div>
+            <div>Quantidade:
+            {{ calcas.qtd_calca }}
+            </div>
+          
+            <button class="button">
+            <a href="/calca-edite/{{calcas.id}}" method = "GET" class="button">Editar</a>
+            </button>
+            <button class="button">
+            <a href="/delete-calca/{{calcas.id}}" method = "GET" class="button">Deletar</a>
+            </button>
+            <br><br>
+            @else
+                    <h1 class="tabela">Nenhuma tarefa foi criada ainda!</h1>
+            @endeach
+            <br>
+            </div>    
+    </section>
+
+    <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

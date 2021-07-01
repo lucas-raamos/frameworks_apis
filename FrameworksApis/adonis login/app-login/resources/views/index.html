@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="ex_b.css">
+    <title>Exercício B Vue.js</title>
+    
+</head>
+<body>
+    <h1> Cadastro de Pessoas</h1>
+    <div id="cadastro">
+        <div id="form">
+            <label for="matricula">Matricula</label>
+            <input id="matricula" v-model='aluno.matricula'><br>
+            
+            <label for="nome">Nome</label>
+            <input id="nome" v-model='aluno.nome'><br>
+            
+            <label for="telefone">Telefone</label>
+            <input id="telefone" v-model='aluno.telefone'><br>
+
+            <div id="botoes">
+                <button v-on:click="addAluno">Adicionar Aluno</button>
+                <button @click="limpar">Limpar</button>
+            </div>
+        </div>
+        <ul>
+            <li v-for="aluno of listaAlunos">{{aluno.nome}}</li>    
+        </ul>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="ex_b.js"></script>
+</html>

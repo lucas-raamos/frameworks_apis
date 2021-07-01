@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Funcionarios</title>
+    {{ style('stylefuncedite')}}
+ 
+</head>
+
+    <body>
+        <div id="container">
+            <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    
+        </header>
+
+        <section>
+            <nav id="menu">
+                <ul>
+                    <li><a href="/categorias">Categorias</a></li>
+                    <li><a href="/sair">Sair</a></li> 
+                </ul>
+            </nav>
+        </section>
+        <div>
+                <h1 class="title">Editar Funcionário</h1>
+                <form method="GET" action="funcionarios-edite/{{funcionarios.id}}">
+                {{ csrfField() }}
+                <label for="nome_funcionario">Nome:</label>
+                <input type="text" id="nome_funcionario" name ="nome_funcionario">
+                <br><br>
+                <label for="data_nasc">Data de nascimento:</label>
+                <input type="text" id="data_nasc" name = "data_nasc">
+                <br><br>
+                <label for="endereco_funcionario">Endereço:</label>
+                <input type="text" id="endereco_funcionario" name="endereco_funcionario">
+                <br><br>
+                <label for="escolaridade_funcionario">Escolaridade:</label>
+                <input type="text" id="escolaridade_funcionario" name="escolaridade_funcionario">
+                 <br><br>
+
+                  <button type="submit" class="button is-danger is-outlined">
+                      <span class="icon is-small">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                      </span>
+                      <button>
+                      <span>Editar</span>
+                  </button>
+              </form>
+          </td>
+          <footer class="footer">
+            
+            <p>Copyright @Lucas Ramos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+        </footer>
+    </body>
+</html>

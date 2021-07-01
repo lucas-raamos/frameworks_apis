@@ -1,0 +1,69 @@
+'use strict'
+
+const LoginController = require('../app/Controllers/Http/LoginController')
+
+/*
+|--------------------------------------------------------------------------
+| Routes
+|--------------------------------------------------------------------------
+|
+| Http routes are entry points to your web application. You can create
+| routes for different URL's and bind Controller actions to them.
+|
+| A complete guide on routing is available here.
+| http://adonisjs.com/docs/4.1/routing
+|
+*/
+
+/** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
+const Route = use('Route')
+
+Route.on('/').render('login')
+Route.get("/" ,'LoginController.login')
+Route.get('/login', 'LoginController.login')
+Route.get('/cadastro', 'LoginController.cadastro')
+Route.get('categorias', 'loginController.categorias')
+Route.post('/cadastro', 'LoginController.adicionaUsuario')
+Route.post("/auth" ,'LoginController.autenticar')
+Route.get("/bemvindo" ,'LoginController.bemVindo')
+Route.get('/sair','LoginController.Sair')
+Route.post('login', 'LoginController.store')
+/*Route.get('/', 'TaskController.index')
+Route.post('tasks', 'TaskController.store')
+Route.delete('tasks/:id', 'TaskController.destroy')*/
+
+//adm
+Route.get('/loginadm', 'LoginController.loginAdm')
+Route.post("/authadm" ,'LoginController.autenticarAdm')
+Route.get('/funcionarios', 'LoginController.funcionarios')
+Route.post('funcionarios', 'LoginController.adicionaFuncionarios')
+Route.get('/funcionarios-edite/:id','Logincontroller.edit_funcionarios')
+Route.get('/funcionarios-edite/funcionarios-edite/:id', 'Logincontroller.atualizaFuncionarios')
+Route.get('/delete-funcionarios/:id','Logincontroller.deletaFuncionarios')
+
+//Route.get('/carrinho', 'LoginController.carrinho')
+
+//Estoque
+Route.get('/estoque', 'LoginController.estoque')
+
+
+Route.get('/calcas', 'LoginController.calcas')
+Route.post('calcas', 'LoginController.adicionaCalca')
+Route.get('/calca-edite/:id','Logincontroller.edit_Calca')
+Route.get('/calca-edite/calca-edite/:id', 'Logincontroller.atualizaCalca')
+Route.get('/delete-calca/:id','Logincontroller.deletaCalca')
+
+
+Route.get('/camisetas', 'LoginController.camisetas')
+Route.post('camisetas', 'LoginController.adicionaCamiseta')
+Route.get('/camiseta-edite/:id','Logincontroller.edit_Camiseta')
+Route.get('/camiseta-edite/camiseta-edite/:id', 'Logincontroller.atualizaCamiseta')
+Route.get('/delete-camiseta/:id','Logincontroller.deletaCamiseta')
+
+Route.get('/casacos', 'LoginController.casacos')
+Route.post('casacos', 'LoginController.adicionaCasaco')
+Route.get('/casaco-edite/:id','Logincontroller.edit_Casaco')
+Route.get('/casaco-edite/casaco-edite/:id', 'Logincontroller.atualizaCasaco')
+Route.get('/delete-casaco/:id','Logincontroller.deletaCasaco')
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello Adonis</title>
+  {{ style ('login')}}
+
+</head>
+<body>
+  <div class="barra">OUTLET ©️LOTHING CENTER</div>
+  <form action="/authadm" method="POST">
+   
+    {{ csrfField() }}
+    <body>
+          <form method="post" action=""> 
+              <h1>LOGIN ADM</h1> 
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required="required" placeholder="ex.l.oliveira260@gmail.com"/><br><br>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required="required" placeholder="ex.senha" /><br><br>
+                
+                <input type="submit" value="Entrar" />
+
+                <input type='button' value='Voltar' onclick="javascript: history.go(-1)" />
+
+                    @if(old('notification'))
+                    
+                    <p style="color:red">
+
+                      {{ old('notification') }}
+
+                    </p>
+                    @endif
+                    
+          </form>
+          </div>
+</body>
+</html>

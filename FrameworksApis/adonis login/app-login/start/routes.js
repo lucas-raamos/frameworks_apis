@@ -1,6 +1,7 @@
 'use strict'
 
 const LoginController = require('../app/Controllers/Http/LoginController')
+const ClienteController = require('../app/Controllers/Http/ClienteController')
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ const LoginController = require('../app/Controllers/Http/LoginController')
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('login')
+Route.on('/').render('bemvindo')
 Route.get("/" ,'LoginController.login')
 Route.get('/login', 'LoginController.login')
 Route.get('/cadastro', 'LoginController.cadastro')
@@ -66,4 +67,9 @@ Route.get('/casaco-edite/:id','Logincontroller.edit_Casaco')
 Route.get('/casaco-edite/casaco-edite/:id', 'Logincontroller.atualizaCasaco')
 Route.get('/delete-casaco/:id','Logincontroller.deletaCasaco')
 
+
+//ROUPAS CLIENTE
+Route.get('shirts', 'ClienteController.shirts')
+Route.get('coats', 'ClienteController.coats')
+Route.get('trousers', 'ClienteController.trousers')
 

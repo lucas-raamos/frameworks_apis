@@ -8,7 +8,7 @@
   <title>Hello Adonis</title>
   <link href="./bootstrap css/bootstrap.css" rel="stylesheet">
 	<link href="./bootstrap css/signin.css" rel="stylesheet">
-  
+  {{ style ('logins')}}
 
 </head>
 <body>
@@ -27,34 +27,31 @@
    
     {{ csrfField() }}
     
-         
-              <h1 class="text-center">Login</h1> 
-                <!--<label for="email">Email</label>-->
-                <input type="text" id="email" name="email" required="required" placeholder="Digite seu e-mail" class="form-control"><br>
+        <h1 class="text-center">Login</h1> 
+        <!--<label for="email">Email</label>-->
+        <input type="text" id="email" name="email" required="required" placeholder="Digite seu e-mail" class="form-control"><br>
                 
-                <!--<label for="senha">Senha</label>-->
-                <input type="password" id="senha" name="senha" required="required" placeholder="Digite sua senha" class="form-control"><br>
+        <!--<label for="senha">Senha</label>-->
+        <input type="password" id="senha" name="senha" required="required" placeholder="Digite sua senha" class="form-control"><br>
                 
-                <input type="submit" name="btnLogin" value="Entrar" class="btn btn-success btn-block"><br>
-                
-                <div class="row text-center" style="margin-top: 20px;"> 
-                <h4>Você ainda não possui uma conta?</h4>
-                <a href="/cadastro">Cadastre-se</a>
+        <input type="submit" name="btnLogin" value="Entrar" class="btn btn-success btn-block"><br>
+        <input type="submit" name="btnLogin" value="Voltar" class="btn btn-success btn-block"onclick="javascript: history.go(-1)"/><br>
+
+        <div class="row text-center" style="margin-top: 20px;"> 
+        <h4>Você ainda não possui uma conta?</h4><br>
+         <a href="/cadastro">Cadastre-se</a>
                
-               
-                    @if(old('notification'))
-                    <p style="color:red" >
-                    {{ old('notification') }}
-                   </p>
-                   @endif
-                  </div>
+                @if(old('notification'))
+                  <p class="MsgDadosIncorretos">
+                  {{ old('notification') }}
+                  </p>
+                @endif
+  </form>
+</div>
+</div>
+</div>
         
-          
-        </div>
-      </div>
-      
-      
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>
 </html>

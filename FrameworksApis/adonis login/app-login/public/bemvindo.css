@@ -1,0 +1,28 @@
+main {
+	width:670px;
+	margin: 20px 10px 50px 50px;	
+	float:left;
+	height: 100%;
+	}
+
+
+h2 {
+	font-size:30px;
+	text-align: center;
+	
+}
+.sessaolancamentos{
+	display: flex;
+	margin-left: 15px;
+
+}
+.sessaolancamentos2{
+	display: flex;
+	margin-left: 15px;
+	margin-top: 30px;
+}
+.sessaolancamentos3{
+	display: flex;
+	margin-top: 30px;
+
+}

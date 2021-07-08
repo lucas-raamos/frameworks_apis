@@ -1,7 +1,6 @@
 main {
 	width:670px;
-	margin: 20px 10px 50px 50px;	
-	float:left;
+	
 	height: 100%;
 	}
 
@@ -14,38 +13,17 @@ h2 {
 .sessaocasacos{
 	/*Alinhamento da descrição*/
 	text-align: center;
-	margin-top: 10px;
 	display: flex;
-	margin-left: 50px;
-}
-#casacos{
-	margin: 10px;
-}
-#casacojeans{
-	margin: 10px;
-}
-#casacocollege{
-	margin: 10px;
-}
-#casacofeminino{
-	margin: 10px;
-}
-#casaconike{
-	margin:15px;
-}
-#casaco{
-	margin:15px;
-}
-h2{
-	text-align: center;
-	margin-top: 20px;
+	margin-left: 130px;
+
+	
+	
 }
 .sessaocasacos2{
-	/*alinhamento da descrição */
+	/*Alinhamento da descrição*/
 	text-align: center;
-	margin-top: 20px;
 	display: flex;
-	margin-left: 30px;
+	margin-left: 130px;
 }
 
 
@@ -55,7 +33,7 @@ h2{
     margin-bottom: 30px;
     display: flex;
     background-color:white;
-    width:400px;
+    width:700px;
     margin-left: 25px;
     padding:10px;
     font-family:'Arial black', sans-serif;
@@ -65,15 +43,27 @@ h2{
     box-shadow:5px 5px 3px rgba(0,0,0,0.7);
     
 }
+.sessaocasacos3{
+	/*alinhamento da descrição */
+	text-align: center;
+	margin-top: 20px;
+	
+	margin-left: 110px;
+}
+figure{
+	padding:40px;
+}
 figcaption{
+	margin-top: 10px;
 	font-size: 14px;
-	font-family: 'arial', sans-serif;
+	color: black;
 	text-align: center;
 
 }
+
 #legenda{
-	font-family: 'arial black';
+	color:black;
 }
 #legenda1{
-	font-family: 'arial black';
+	color: black;
 }

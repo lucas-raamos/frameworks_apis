@@ -73,3 +73,7 @@ Route.get('shirts', 'ClienteController.shirts')
 Route.get('coats', 'ClienteController.coats')
 Route.get('trousers', 'ClienteController.trousers')
 
+
+//Fale conosco
+Route.get('contato', 'ClienteController.contato')
+

@@ -56,6 +56,7 @@ nav {
 	top:75px;
 	margin:0; 
 	padding:0;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
 	} 
 nav a { 
 	color: black;

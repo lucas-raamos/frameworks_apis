@@ -7,9 +7,9 @@ main{
   
 }
 table{
-    
+    width: 900px;
     border: 3px solid black;
-    margin-left: 120px;
+    margin-left: 40px;
     border-collapse: collapse; 
     margin-top: 20px;
     
@@ -41,4 +41,10 @@ table{
     height: 35px;
     color: red;
       
+}
+h2{
+    font-size: 30px;
+    background-color: gray;
+    color: black;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
 }

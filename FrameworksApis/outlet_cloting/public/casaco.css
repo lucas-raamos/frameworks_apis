@@ -42,3 +42,10 @@ table{
     color: red;
       
 }
+h2{
+    font-size: 30px;
+    background-color: gray;
+    color: black;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
+    
+}

@@ -2,3 +2,32 @@
 nav a{
     font-size: 25px;
 }
+main{
+    height: 100%;
+
+}
+table{
+    
+    border: 3px solid black;
+    margin-left: 250px;
+    width: 500px;
+    border-collapse: collapse; 
+    margin-top: 20px;
+    
+        
+}
+
+ td{
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid black;
+      
+ }
+ .button{
+    text-decoration: none;
+    font-size: 15px;
+    width: 90px;
+    height: 35px;
+    color: red;
+      
+}

@@ -12,15 +12,18 @@
         <div id="container">
         <header>
             <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
-            <nav class="menuEdite">
-                    <a href="/categorias">Categorias</a>
+            <h1>Bem vindo Adm!!{{email}}</h1>
+            <nav>
+                    <a href="/calcas">Calças</a>
+                    <a href="/camisetas">Camisetas</a>
+                    <a href="/casacos">Casacos</a>
                     <a href="/sair">Sair</a>
-
             </nav>
         </header>
         <main>
-        <div>
-                <h1 class="title">Editando Calça</h1>
+            <table>
+                <td>
+                <h1>Editando Calça</h1>
                 <form method="GET" action="calca-edite/{{calcas.id}}">
                 {{ csrfField() }}
                 <label for="marca_calca">Nova Marca:</label>
@@ -42,6 +45,7 @@
                  
               </form>
           </td>
+            </table>
         </main>
           <footer id="rodape">
             

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Calcas</title>
+    {{ style('principal')}}
+    {{ style('calca-edite')}}
+
+ 
+</head>
+    <body>
+        <div id="container">
+        <header>
+            <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+            <nav class="menuEdite">
+                    <a href="/categorias">Categorias</a>
+                    <a href="/sair">Sair</a>
+
+            </nav>
+        </header>
+        <main>
+        <div>
+                <h1 class="title">Editando Calça</h1>
+                <form method="GET" action="calca-edite/{{calcas.id}}">
+                {{ csrfField() }}
+                <label for="marca_calca">Nova Marca:</label>
+                <input type="text" id="marca_calca" name ="marca_calca">
+                <br><br>
+                <label for="tamanho_calca">Novo Tamanho:</label>
+                <input type="text" id="tamanho_calca" name = "tamanho_calca">
+                <br><br>
+                <label for="qtd_calca">Nova Quantidade:</label>
+                <input type="text" id="qtd_calca" name="qtd_calca">
+                <br><br>
+
+                  <button type="submit" class="button is-danger is-outlined">
+                      <span class="icon is-small">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                      </span>
+                      
+                      <span>Editar</span>
+                 
+              </form>
+          </td>
+        </main>
+          <footer id="rodape">
+            
+            <p>Copyright @Lucas Ramos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+        </footer>
+    </body>
+</html>

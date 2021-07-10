@@ -1,0 +1,69 @@
+main {
+	width:670px;
+	
+	height: 100%;
+	}
+
+
+h2 {
+	font-size:30px;
+	text-align: center;
+	
+}
+.sessaocasacos{
+	/*Alinhamento da descrição*/
+	text-align: center;
+	display: flex;
+	margin-left: 130px;
+
+	
+	
+}
+.sessaocasacos2{
+	/*Alinhamento da descrição*/
+	text-align: center;
+	display: flex;
+	margin-left: 130px;
+}
+
+
+
+.casaco{
+	margin-top:  20px;
+    margin-bottom: 30px;
+    display: flex;
+    background-color:white;
+    width:700px;
+    margin-left: 25px;
+    padding:10px;
+    font-family:'Arial black', sans-serif;
+    /*Borda*/
+    border:1px solid black;
+    /*Sombra da borda*/
+    box-shadow:5px 5px 3px rgba(0,0,0,0.7);
+    
+}
+.sessaocasacos3{
+	/*alinhamento da descrição */
+	text-align: center;
+	margin-top: 20px;
+	
+	margin-left: 110px;
+}
+figure{
+	padding:40px;
+}
+figcaption{
+	margin-top: 10px;
+	font-size: 14px;
+	color: black;
+	text-align: center;
+
+}
+
+#legenda{
+	color:black;
+}
+#legenda1{
+	color: black;
+}

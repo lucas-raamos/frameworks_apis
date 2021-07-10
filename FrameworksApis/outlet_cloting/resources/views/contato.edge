@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adm</title>
+    {{ style ('principal')}}
+    {{ style ('contato')}}
+
+</head>
+
+<body>
+    <div id="container">
+    <header>
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+        <a href="/bemvindo">Inicio</a>
+        <a href="/loginadm">Administrador</a>
+        <a href="/login">Logar</a>
+        <br><br>
+        <a href="/trousers">Calças</a>
+        <a href="/shirts">Camisetas</a>
+        <a href="/coats">Casacos</a>
+        <a href="/contato">Fale Conosco</a>
+        <a href="/sair">Sair</a>
+    </nav>
+    </header>
+<main>
+            
+    <div class="contato">
+        <img src="img/contato.png" alt="imagemContato" />
+    </div>
+
+
+<form method="POST" action="processa.php" >
+<table class="tableContato">
+    <tr>
+        <td>Nome Completo:</td>
+        <td><input type="text" name="nome" size="40" required = "required"> <br /></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type="text" name="email" size="40" required = "required"></td>
+    </tr><br>
+    <tr>
+        <td>(DDD)Celular:</td>
+        <td><input type="text" name="celular" size="40" required = "required"></td>
+      </tr><br>
+    <tr>
+        <td>Endereço:</td>
+        <td><input type="text" name="endereco" size="40" required = "required"></td>
+      </tr><br>
+    <tr>
+        <td>CEP:</td>
+        <td><input type="text" name="cep" size="5" maxlength="5" required = "required"> - <input type="text" name="cep2" size="3" maxlength="3" required = "required"></td>
+    </tr>
+        <td>Data de Nascimento</td>
+        <td><input type="date" name="dataNasc" required = "required"></td>
+    </td>
+    <tr>
+        <td>Mensagem</td><br>
+        <td><textarea name="mensagem" maxlength=300  cools="25" rows="5" required = "required"></textarea></td>
+    </tr>
+</table><br><br>
+</form>
+<div id="botao">
+<input type="submit" name="btn" onclick="funcao1()" value="Enviar">
+</div>
+</main>
+<footer id="rodape">
+    <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+</footer>
+</div>
+</body>
+<script>
+function funcao1()
+{
+alert("Mensagem enviada!!!");
+}
+</script>
+
+
+
+</html>

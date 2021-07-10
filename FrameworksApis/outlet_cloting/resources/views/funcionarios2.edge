@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="ex_b.css">
+    <title>Adm</title>
+    {{ style ('principal')}}
+    {{ style ('func')}}
+</head>
+
+<body>
+    <div id="container">
+    <header class="headerFuncionarios">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+            <a href="/camisetas">Estoque</a>
+            <a href="/sair">Sair</a>
+
+    </header>
+    <main>
+	<h2>Controle de Funcionarios</h2>
+    <section>
+        <form action = "/funcionarios" method = "POST" class= "form_funcionario">
+            {{ csrfField() }}
+            <div id="cadastro">
+                <h3> Adicionar Funcionário</h3>
+                <label for="nome_funcionario">Nome:</label>
+                <input type="text" id="nome_funcionario" v-model='funcionario.nome_funcionario' name ="nome_funcionario">
+                <br><br>
+
+                <label for="data_nasc">Data de nascimento:</label>
+                <input type="text" id="data_nasc" v-model='funcionario.data_nasc' name = "data_nasc">
+                <br><br>
+
+                <label for="endereco_funcionario">Endereço:</label>
+                <input type="text" id="endereco_funcionario" v-model='funcionario.endereco_funcionario' name="endereco_funcionario">
+                <br><br>
+
+                <label for="escolaridade_funcionario">Escolaridade:</label>
+                 <input type="text" id="escolaridade_funcionario" v-model='funcionario.escolaridade_funcionario' name="escolaridade_funcionario">
+            
+            <br>
+            <div id="botoes">
+                <button v-on:click="addFunc" class = "button" type="submit">Adicionar</button>
+                <button @click="limpar">Limpar</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    <ul>
+        <li v-for="funcionarios of listaFunc">{{funcionarios.nome_funcionario}}</li>    
+    </ul>
+</div>
+
+</main>
+    <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="ex_b.js"></script>
+</html>

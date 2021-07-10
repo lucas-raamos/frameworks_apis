@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adm</title>
+    {{ style ('principal')}}
+    {{ style ('camiseta')}}
+</head>
+
+<body>
+    <div id="container">
+    <header class="headerRoupas">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+            <a href="/calcas">Calças</a>
+            <a href="/camisetas">Camisetas</a>
+            <a href="/casacos">Casacos</a>
+            <a href="/sair">Sair</a>
+    </nav>
+    </header>
+    
+    <main>
+        <table class="tableForm">
+        <td>
+	    <h2>ADICIONE UMA NOVA CAMISETA</h2>
+   
+        <form action = "/camisetas" method = "POST" class= "form_camiseta">
+            {{ csrfField() }}
+            <div>
+                
+                <label for="marca_camiseta">Marca:</label>
+                <input type="text" id="marca_camiseta" name ="marca_camiseta">
+                <br><br>
+                <label for="tamanho_camiseta">Tamanho:</label>
+                <input type="text" id="tamanho_camiseta" name = "tamanho_camiseta">
+                <br><br>
+                <label for="qtd_camiseta">Quantidade:</label>
+                <input type="text" id="qtd_camiseta" name="qtd_camiseta">
+                <br><br>
+            </div>
+            <div>
+                <button class = "button" type="submit">Adicionar</button>
+            </div>
+            </td>
+        </form>
+        </table>
+    <table>
+       
+        <h1>Lista de Camisetas</h1>
+        @each(camisetas in camisetas)
+        <table>
+            <tr>
+              
+                <th style='text-align: center;'>Id</th>
+                <th style='text-align: center;'>Marca</th>
+                <th style='text-align: center;'>Tamanho</th>
+                <th style='text-align: center;'>Quantidade</th>
+                <th colspan="2" >Ação</th>
+            </tr>
+            <td>
+            {{ (camisetas.id -1) }}
+            </td>
+            <td>   
+            {{ camisetas.marca_camiseta }}
+            </td>
+            <td>
+            {{ camisetas.tamanho_camiseta }}
+            </td>
+            <td>
+            {{ camisetas.qtd_camiseta }}
+            </td>
+            <td>
+            <button class="button">
+            <a href="/camiseta-edite/{{camisetas.id}}" method = "GET" class="button">Editar</a>
+            </button>
+            </td>
+            <td>
+            <button class="button">
+            <a href="/delete-camiseta/{{camisetas.id}}" method = "GET" class="button">Deletar</a>
+            </button>
+            </td>
+            </table>
+
+            @else
+                    <h1 class="tabela">Nenhuma tarefa foi criada ainda!</h1>
+            @endeach
+            <br>
+            </div> 
+        </tr>   
+
+    </main>
+
+    <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

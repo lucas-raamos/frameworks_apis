@@ -16,6 +16,17 @@ h2 {
 	height: 50px;
 	
 }
+figcaption{
+	/*Define o tamanho da fonte padrão para legenda das minhas imagens*/
+	font-size: 14px;
+	/*fonte, fonte, família*/
+	font-family: 'arial',verdana, sans-serif;
+	/*Alinhamento das legendas das imagens*/
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	text-indent: 0;
+}
 .sessaolancamentos{
 	display: flex;
 	margin-left: 15px;

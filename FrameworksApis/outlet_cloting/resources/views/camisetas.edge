@@ -80,7 +80,7 @@
             </td>
             <td>
             <button class="button">
-            <a href="/delete-camiseta/{{camisetas.id}}" method = "GET" class="button">Deletar</a>
+            <a href="/delete-camiseta/{{camisetas.id}}" method = "GET" onclick="deletar()" class="button">Deletar</a>
             </button>
             </td>
             </table>
@@ -100,4 +100,12 @@
     </footer>
 
 </body>
+<script>
+    function deletar()
+    {
+    alert("Camiseta deletada!");
+    }
+</script>
+
+
 </html>

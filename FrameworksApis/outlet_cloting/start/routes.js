@@ -23,7 +23,6 @@ Route.on('/').render('bemvindo')
 Route.get("/" ,'LoginController.login')
 Route.get('/login', 'LoginController.login')
 Route.get('/cadastro', 'LoginController.cadastro')
-Route.get('categorias', 'loginController.categorias')
 Route.post('/cadastro', 'LoginController.adicionaUsuario')
 Route.post("/auth" ,'LoginController.autenticar')
 Route.get("/bemvindo" ,'LoginController.bemVindo')
@@ -32,6 +31,14 @@ Route.post('login', 'LoginController.store')
 /*Route.get('/', 'TaskController.index')
 Route.post('tasks', 'TaskController.store')
 Route.delete('tasks/:id', 'TaskController.destroy')*/
+
+
+Route.post('/usuario', 'LoginController.store')
+Route.post('/loginAuth', 'LoginController.loginAuth')
+Route.get('/usuario', 'LoginController.index')
+Route.get('/usuario', 'LoginController.index').middleware('auth');
+
+
 
 //adm
 Route.get('/loginadm', 'LoginController.loginAdm')

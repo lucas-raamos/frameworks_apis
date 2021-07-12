@@ -78,7 +78,7 @@
             </td>
             <td>
             <button class="button">
-            <a href="/deleta-casaco/{{casacos.id}}" method = "GET" class="button">Deletar</a>
+            <a href="/deleta-casaco/{{casacos.id}}" method = "GET" onclick="deletar()"class="button">Deletar</a>
             </button>
             </td>
             </table>
@@ -95,4 +95,11 @@
         <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
     </footer>
 </body>
+<script>
+    function deletar()
+    {
+    alert("Casaco deletado!");
+    }
+</script>
+
 </html>

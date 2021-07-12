@@ -1,5 +1,6 @@
 'use strict'
 
+
 const Usuario = use('App/Models/Usuario')
 const Calcas = use('App/Models/Calcas')
 const Camisetas = use('App/Models/Camisetas')
@@ -12,30 +13,45 @@ const { validate } = use('Validator')
 
 
 class LoginController {
-    async store ({ request, session, response }) {
-        const rules = {
-          email: 'required|email|unique:login,email',
-          senha: 'required'
-        }
-    
-        const validation = await validate(request.all(), rules)
-    
-        if (validation.fails()) {
-          session
-            .withErrors(validation.messages())
-            .flashExcept(['senha'])
-    
-          return response.redirect('back')
-        }
-    
-        return 'Validation passed'
-      }
 
-    async login ({view}) { 
-        console.log("Tela de Login")
-        return view.render("login")
+    async store ({ request, response }) {
+        const data = request.only(['email', 'username', 'password']);
+        
+        const usuario = await Usuario.create(data);
 
+        return usuario;
     }
+
+    async index({ request, response}){
+        const usuarios = Usuario.all();
+
+        return usuarios;
+    }
+
+
+    
+
+    async loginAuth ({request, response, auth, view}) { 
+      
+        try{
+            const{email, password} =request.all();
+
+            const token = await auth.attempt(email, password);
+            
+            return token;
+        }   catch (error) {
+            return response.status(500).send({error: error})
+        }
+        
+        }
+
+    async login ( {view}  ) { 
+        console.log("Tela de login")
+        return view.render("login")
+    }   
+
+    
+    
     async cadastro ( {view}  ) { 
         return view.render("cadastro")
     }
@@ -49,9 +65,9 @@ class LoginController {
     
     async adicionaUsuario({ request, session, response }){
         const usuario = await Usuario.create({
-            nome:  request.input('nome'),
             email: request.input('email'),
-            senha: request.input('senha')
+            username:  request.input('username'),
+            password: request.input('password')
     })
             session.flash({ 'successmessage': 'Adicionado'})
             return response.redirect('/')
@@ -66,7 +82,7 @@ class LoginController {
         // .first()
         const usuario = await Usuario.findBy('email', request.input('email'))
         // if(usuario == "admin@admin.com" && usuario.senha == "123456"){
-            if(usuario && usuario.senha == request.input("senha")){
+            if(usuario && usuario.senha == request.input("password")){
             session.put("email", usuario.email);
             console.log("Nome do usuário é: ", usuario.email)
             console.log("Autenticado com sucesso!!!")

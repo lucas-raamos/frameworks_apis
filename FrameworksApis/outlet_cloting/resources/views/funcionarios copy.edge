@@ -25,7 +25,7 @@
      <main>   
     <h1> Cadastro de Funcionaros</h1>
     <form action = "/funcionarios" method = "POST" class= "form_funcionario">
-       
+        {{ csrfField() }}
     <div id="cadastro">
         <form-funcionarios :funcionario="novoFuncionario" v-on:salvar="addFuncionario"></form-funcionarios>
         <br />

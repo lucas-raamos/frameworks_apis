@@ -1,0 +1,50 @@
+main {
+	width:670px;
+	height: 420px;
+	}
+
+h3{
+	font-size: 25px;
+	margin-left: 300px;
+	color: palevioletred;
+}
+.text{
+	color: black;
+
+}
+.quemSomos{
+	background-color:lavenderblush;
+	border-style:solid;
+	padding: 10px;
+	position: relative;
+	left: 150px;
+	
+	
+}
+.quemSomos2{
+	margin-top: 30px;
+	color: black;
+	border-style: solid;
+	height: 120px;
+	position: relative;
+	width: 974px;
+	
+	
+}
+img{
+	width: 50px;
+	float: left;
+	margin-left: 10px;
+}
+.text2{
+	
+	margin-left: 50px;
+	margin-top: 100px;
+}
+.form_quemSomos{
+	margin-top: 20px;
+}
+
+label{
+	font-weight: bold;
+}

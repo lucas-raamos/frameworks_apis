@@ -2,6 +2,8 @@
 
 const LoginController = require('../app/Controllers/Http/LoginController')
 const ClienteController = require('../app/Controllers/Http/ClienteController')
+const AdmController = require('../app/Controllers/Http/AdmController')
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,34 +52,42 @@ Route.get('/funcionarios.html' , 'LoginController.funcionarios')
 
 //Route.get('/carrinho', 'LoginController.carrinho')
 
-//Estoque
-Route.get('/estoque', 'LoginController.estoque')
+//Estoque Rotas
+
+Route.get('/calcas', 'AdmController.calcas')
+Route.post('calcas', 'AdmController.adicionaCalca')
+Route.get('/calca-edite/:id','AdmController.edit_Calca')
+Route.get('/calca-edite/calca-edite/:id', 'AdmController.atualizaCalca')
+Route.get('/delete-calca/:id','AdmController.deletaCalca')
 
 
-Route.get('/calcas', 'LoginController.calcas')
-Route.post('calcas', 'LoginController.adicionaCalca')
-Route.get('/calca-edite/:id','Logincontroller.edit_Calca')
-Route.get('/calca-edite/calca-edite/:id', 'Logincontroller.atualizaCalca')
-Route.get('/delete-calca/:id','Logincontroller.deletaCalca')
+Route.get('/camisetas', 'AdmController.camisetas')
+Route.post('camisetas', 'AdmController.adicionaCamiseta')
+Route.get('/camiseta-edite/:id','Admcontroller.edit_Camiseta')
+Route.get('/camiseta-edite/camiseta-edite/:id', 'Admcontroller.atualizaCamiseta')
+Route.get('/delete-camiseta/:id','Admcontroller.deletaCamiseta')
 
+Route.get('/casacos', 'AdmController.casacos')
+Route.post('casacos', 'AdmController.adicionaCasaco')
+Route.get('/casaco-edite/:id','AdmController.edit_Casaco')
+Route.get('/casaco-edite/casaco-edite/:id', 'AdmController.atualizaCasaco')
+Route.get('/deleta-casaco/:id','AdmController.deletaCasaco')
 
-Route.get('/camisetas', 'LoginController.camisetas')
-Route.post('camisetas', 'LoginController.adicionaCamiseta')
-Route.get('/camiseta-edite/:id','Logincontroller.edit_Camiseta')
-Route.get('/camiseta-edite/camiseta-edite/:id', 'Logincontroller.atualizaCamiseta')
-Route.get('/delete-camiseta/:id','Logincontroller.deletaCamiseta')
-
-Route.get('/casacos', 'LoginController.casacos')
-Route.post('casacos', 'LoginController.adicionaCasaco')
-Route.get('/casaco-edite/:id','Logincontroller.edit_Casaco')
-Route.get('/casaco-edite/casaco-edite/:id', 'Logincontroller.atualizaCasaco')
-Route.get('/deleta-casaco/:id','Logincontroller.deletaCasaco')
-
+//FUNCIONARIOS (ADM)
+Route.get('/funcionarios', 'AdmController.funcionarios')
+Route.post('funcionarios', 'AdmController.adicionaFuncionario')
+Route.get('/funcionario-edite/:id','AdmController.edit_Funcionario')
+Route.get('/funcionario-edite/funcionario-edite/:id', 'AdmController.atualizaFuncionario')
+Route.get('/delete-funcionario/:id','AdmController.deleteFuncionario')
 
 //ROUPAS CLIENTE
 Route.get('shirts', 'ClienteController.shirts')
 Route.get('coats', 'ClienteController.coats')
 Route.get('trousers', 'ClienteController.trousers')
+
+//RECEBA AS PROMOÇÕES
+Route.get('/promocoes', 'ClienteController.promocoes')
+Route.post('promocoes', 'ClienteController.receberPromo')
 
 
 //Fale conosco

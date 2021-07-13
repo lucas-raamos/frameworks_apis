@@ -6,6 +6,14 @@ main{
     width: 550px
   
 }
+label{
+    float: left;
+  }
+  input{
+    float: right;
+    margin-right: 150px;
+  }
+  
 table{
     
     border: 3px solid black;

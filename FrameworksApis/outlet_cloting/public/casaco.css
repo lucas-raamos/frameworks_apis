@@ -15,6 +15,13 @@ table{
     
         
 }
+label{
+    float: left;
+  }
+  input{
+    float: right;
+    margin-right: 150px;
+  }
 
 
  th{

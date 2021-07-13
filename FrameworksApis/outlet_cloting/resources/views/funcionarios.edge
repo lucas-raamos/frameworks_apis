@@ -1,45 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="vueCss/vueFunc.css">
-    
-    <title>Funcionarios</title>
-    
-    
+    <link rel="stylesheet" type="text/css" href="ex_b.css">
+    <title>Adm</title>
+    {{ style ('principal')}}
+    {{ style ('func')}}
 </head>
+
 <body>
     <div id="container">
-        <header class="headerFuncionarios">
-        <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
-    
-        <h1>Bem vindo Adm!!{{email}}</h1>
-        <nav>
-                <a href="/camisetas">Estoque</a>
-                <a href="/sair">Sair</a>
-    
-        </header>
-     <main>   
-    <h1> Cadastro de Funcionaros</h1>
-    <form action = "/funcionarios" method = "POST" class= "form_funcionario">
-        {{ csrfField() }}
-    <div id="cadastro">
-        <form-funcionarios :funcionario="novoFuncionario" v-on:salvar="addFuncionario"></form-funcionarios>
-        <br />
-        <tabela-funcionarios :funcionarios="listaFuncionarios"></tabela-funcionarios>
-    </div>
-    </form>
-     </main>
-     <footer class="footer">
+    <header class="headerRoupas">
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+        <a href="/calcas">Calças</a>
+        <a href="/camisetas">Camisetas</a>
+        <a href="/casacos">Casacos</a>
+        <a href="/funcionarios">Funcionarios</a>
+        <a href="/usuarios">Clientes</a>
+        <a href="/sair">Sair</a>
+
+    </header>
+    <main>
+    <table class="tableForm">
+    <td>
+	<h2>Controle de Funcionarios</h2>
+   
+        <form action = "/funcionarios" method = "POST" class= "form_funcionario">
+            {{ csrfField() }}
+            <div>
+                <h3> Adicionar Funcionário</h3>
+                <label for="nome_funcionario">Nome:</label>
+                <input type="text" id="nome_funcionario" name ="nome_funcionario">
+                <br><br>
+
+                <label for="data_nasc">Data de nascimento:</label>
+                <input type="text" id="data_nasc"  name = "data_nasc">
+                <br><br>
+
+                <label for="endereco_funcionario">Endereço:</label>
+                <input type="text" id="endereco_funcionario"  name="endereco_funcionario">
+                <br><br>
+
+                <label for="escolaridade_funcionario">Escolaridade:</label>
+                 <input type="text" id="escolaridade_funcionario"  name="escolaridade_funcionario">
+            
+            <br><br>
+            <div id="botoes">
+                <button class = "button" type="submit">Adicionar</button>
+         
+            </div>
+        </div>
+    </td>
+</form>
+</table>
+<table>
+    <h2>LISTA DE FUNCIONARIOS</h2>
+        @each(funcionarios in funcionarios)
+        <table>
+            <tr>
+                <th style='text-align: center;'>Id</th>
+                <th style='text-align: center;'>Nome</th>
+                <th style='text-align: center;'>Data de Nascimento</th>
+                <th style='text-align: center;'>Endereço</th>
+                <th style='text-align: center;'>Escolaridade</th>
+                <th colspan="2" >Ação</th>
+            </tr>
+            <td>
+            {{ (funcionarios.id -1) }}
+            </td>
+            <td>   
+            {{ funcionarios.nome_funcionario }}
+            </td>
+            <td>
+            {{ funcionarios.data_nasc }}
+            </td>
+            <td>
+            {{ funcionarios.endereco_funcionario }}
+            </td>
+            <td>
+            {{ funcionarios.escolaridade_funcionario }}
+            </td>
+            <td>
+            <button class="button">
+            <a href="/funcionario-edite/{{funcionarios.id}}" method = "GET" class="button">Editar</a>
+            </button>
+            </td>
+            <td>
+            <button class="button">
+            <a href="/delete-funcionario/{{funcionarios.id}}" method = "GET" onclick="deletar()" class="button">Deletar</a>
+            </button>
+            </td>
+            </table>
+
+            @else
+                    <h1 class="tabela">Nenhuma tarefa foi criada ainda!</h1>
+            @endeach
+            <br>
+            </div> 
+        </tr>   
+
+</main>
+    <footer class="footer">
    
         <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
     </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="componentes/form-funcionarios.js"></script>
-<script src="componentes/tabela-funcionarios.js"></script>
-<script src="vueFunc.js"></script>
+<script>
+    function deletar()
+    {
+    alert("Funcionario deletado!");
+    }
+</script>
 </html>

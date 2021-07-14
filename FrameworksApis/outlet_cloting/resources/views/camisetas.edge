@@ -40,6 +40,9 @@
                 <label for="tamanho_camiseta">Tamanho:</label>
                 <input type="text" id="tamanho_camiseta" name = "tamanho_camiseta">
                 <br><br>
+                <label for="preco_camiseta">Preço:</label>
+                <input type="text" id="preco_camiseta" name = "preco_camiseta">
+                <br><br>
                 <label for="qtd_camiseta">Quantidade:</label>
                 <input type="text" id="qtd_camiseta" name="qtd_camiseta">
                 <br><br>
@@ -60,6 +63,7 @@
                 <th style='text-align: center;'>Id</th>
                 <th style='text-align: center;'>Marca</th>
                 <th style='text-align: center;'>Tamanho</th>
+                <th style='text-align: center;'>Preço</th>
                 <th style='text-align: center;'>Quantidade</th>
                 <th colspan="2" >Ação</th>
             </tr>
@@ -72,6 +76,9 @@
             <td>
             {{ camisetas.tamanho_camiseta }}
             </td>
+            <td>
+            {{ camisetas.preco_camiseta }}
+             </td>
             <td>
             {{ camisetas.qtd_camiseta }}
             </td>

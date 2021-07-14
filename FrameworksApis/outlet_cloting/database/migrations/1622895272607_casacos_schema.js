@@ -9,6 +9,7 @@ class CasacosSchema extends Schema {
       table.increments()
       table.string('marca_casaco', 80).notNullable()
       table.string('tamanho_casaco', 254).notNullable()
+      table.string('preco_casaco', 254).notNullable()
       table.string('qtd_casaco', 60).notNullable()
       table.timestamps()
     })

@@ -25,6 +25,7 @@ class admController {
         const calcas = await Calcas.create({
             marca_calca: request.input('marca_calca'),
             tamanho_calca:  request.input('tamanho_calca'),
+            preco_calca:  request.input('preco_calca'),
             qtd_calca: request.input('qtd_calca')
         })
             session.flash({ 'successmessage': 'Calça adicionada'})
@@ -42,6 +43,7 @@ class admController {
         const calcas = await Calcas.find(params.id)
         calcas.marca_calca = request.input('marca_calca')
         calcas.tamanho_calca  = request.input('tamanho_calca'),
+        calcas.preco_calca  = request.input('preco_calca'),
         calcas.qtd_calca= request.input('qtd_calca')
         await calcas.save()
         return response.redirect('/calcas')
@@ -67,6 +69,7 @@ class admController {
         const camisetas = await Camisetas.create({
             marca_camiseta:  request.input('marca_camiseta'),
             tamanho_camiseta: request.input('tamanho_camiseta'),
+            preco_camiseta: request.input('preco_camiseta'),
             qtd_camiseta: request.input('qtd_camiseta')
         })
             session.flash({ 'successmessage': 'Camiseta adicionada'})
@@ -84,6 +87,7 @@ class admController {
         const camisetas = await Camisetas.find(params.id)
         camisetas.marca_camiseta  = request.input('marca_camiseta'),
         camisetas.tamanho_camiseta = request.input('tamanho_camiseta'),
+        camisetas.preco_camiseta = request.input('preco_camiseta'),
         camisetas.qtd_camiseta = request.input('qtd_camiseta')
         await camisetas.save()
         return response.redirect('/camisetas')
@@ -107,6 +111,7 @@ class admController {
         const casacos = await Casacos.create({
             marca_casaco:  request.input('marca_casaco'),
             tamanho_casaco: request.input('tamanho_casaco'),
+            preco_casaco: request.input('preco_casaco'),
             qtd_casaco: request.input('qtd_casaco')
         })
             session.flash({ 'successmessage': 'Casaco adicionado'})
@@ -124,6 +129,7 @@ class admController {
         const casacos = await Casacos.find(params.id)
         casacos.marca_casaco  = request.input('marca_casaco'),
         casacos.tamanho_casaco = request.input('tamanho_casaco'),
+        casacos.preco_casaco = request.input('preco_casaco'),
         casacos.qtd_casaco = request.input('qtd_casaco')
         await casacos.save()
         return response.redirect('/casacos')

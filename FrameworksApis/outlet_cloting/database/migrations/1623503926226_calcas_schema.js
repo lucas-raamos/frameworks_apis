@@ -9,6 +9,7 @@ class CalcasSchema extends Schema {
       table.increments()
       table.string('marca_calca', 80).notNullable()
       table.string('tamanho_calca', 254).notNullable()
+      table.string('preco_calca', 254).notNullable()
       table.string('qtd_calca', 60).notNullable()
       table.timestamps()
     })

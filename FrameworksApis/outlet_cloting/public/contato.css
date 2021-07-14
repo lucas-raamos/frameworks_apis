@@ -11,15 +11,18 @@ main {
 	margin-left: 200px;
 
 }
-
-.tableContato{
-
-	font-size: 15px;
-	line-height: 2;
+form{
 	margin-left: 20px;
-
+	padding: 20px;
 }
-#botao{
+label{
+    float: left;
+	
+
+  }
+
+
+.botao{
 	margin-top: 2px;
 	margin-left: 20px;
 }

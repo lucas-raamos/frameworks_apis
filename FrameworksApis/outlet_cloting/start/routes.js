@@ -87,7 +87,7 @@ Route.get('trousers', 'ClienteController.trousers')
 
 //RECEBA AS PROMOÇÕES
 Route.get('/promocoes', 'ClienteController.promocoes')
-Route.post('promocoes', 'ClienteController.receberPromo')
+Route.post('promocoes', 'ClienteController.addpromocoes')
 
 
 //Fale conosco

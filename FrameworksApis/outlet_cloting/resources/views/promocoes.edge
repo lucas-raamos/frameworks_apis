@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contato</title>
+    <title>Quem somos</title>
     {{ style ('principal')}}
     {{ style ('quemSomos')}}
 
@@ -18,6 +18,7 @@
     <h1>Bem vindo Adm!!{{email}}</h1>
     <nav>
         <a href="/bemvindo">Inicio</a>
+        <a href="/promocoes">Quem somos</a>
         <a href="/loginadm">Administrador</a>
         <a href="/login">Logar</a>
         <br><br>
@@ -41,8 +42,6 @@
         <b class="text2">FAÇA PARTE DA FAMÍLIA OUTLET E FIQUE POR DENTRO DAS NOVIDADES E PROMOÇÕES</b>
         <br><br>
         <form action = "/promocoes" method = "POST" class= "form_quemSomos">
-
-
         
             <label for="nome_cliente">Digite seu nome:</label>
             <input type="text" id="nome_cliente" name="nome_cliente">
@@ -50,7 +49,7 @@
             <label for="email_cliente">Digite seu e-mail:</label>
             <input type="text" id="email_cliente" name="email_cliente">
 
-            <button class = "button" type="submit">OK</button>
+            <button class = "button" onclick="funcao1()" type="submit">OK</button>
             
         </form>
     </div>
@@ -64,7 +63,7 @@
 <script>
 function funcao1()
 {
-alert("Mensagem enviada!!!");
+alert("Você recebá notícias e promoções em seu email!!!");
 }
 </script>
 

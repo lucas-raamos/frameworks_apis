@@ -30,7 +30,8 @@ figcaption{
 	/*Alinhamento da descrição*/
 	text-align: center;
 	display: flex;
-	margin-left: 130px;
+	margin-left: 5px;
+
 
 	
 	
@@ -39,7 +40,8 @@ figcaption{
 	/*Alinhamento da descrição*/
 	text-align: center;
 	display: flex;
-	margin-left: 130px;
+	margin-left: 5px;
+	
 }
 
 
@@ -67,7 +69,7 @@ figcaption{
 	margin-left: 110px;
 }
 figure{
-	padding:40px;
+	padding:20px;
 }
 figcaption{
 	margin-top: 10px;

@@ -37,6 +37,9 @@
                 <label for="tamanho_calca">Tamanho:</label>
                 <input type="text" id="tamanho_calca" name = "tamanho_calca">
                 <br><br>
+                <label for="preco_calca">Preço:</label>
+                <input type="text" id="preco_calca" name = "preco_calca">
+                <br><br>
                 <label for="qtd_calca">Quantidade:</label>
                 <input type="text" id="qtd_calca" name="qtd_calca">
                 <br><br>
@@ -58,6 +61,7 @@
                 <th style='text-align: center;'>Id</th>
                 <th style='text-align: center;'>Marca</th>
                 <th style='text-align: center;'>Tamanho</th>
+                <th style='text-align: center;'>Preço</th>
                 <th style='text-align: center;'>Quantidade</th>
                 <th colspan="2" >Ação</th>
             </tr>
@@ -69,6 +73,9 @@
             </td>
             <td>
             {{ calcas.tamanho_calca }}
+            </td>
+            <td>
+            {{ calcas.preco_calca }}
             </td>
             <td>
             {{ calcas.qtd_calca }}

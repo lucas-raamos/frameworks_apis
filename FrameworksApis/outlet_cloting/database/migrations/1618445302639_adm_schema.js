@@ -8,8 +8,8 @@ class AdmsSchema extends Schema {
     this.create('adms', (table) => {
       table.increments()
       table.string('email', 80).notNullable().unique()
-      table.string('nome', 254).notNullable().unique()
-      table.string('senha', 60).notNullable().unique()
+      table.string('nome', 254).notNullable()
+      table.string('senha', 60).notNullable()
       table.timestamps()
     })
 }

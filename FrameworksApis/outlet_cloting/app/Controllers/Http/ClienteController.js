@@ -19,11 +19,11 @@ class ClienteController {
     }
     async promocoes ({ view }) { 
         const promocoes = await Promocoes.all()
-        console.log(Promocoes);
+        console.log(promocoes);
         return view.render('promocoes', { promocoes: promocoes.toJSON() })
     }
 
-    async receberPromo({ request, session, response }){
+    async addpromocoes({ request, session, response }){
         const promocoes = await Promocoes.create({
             nome_cliente: request.input('nome_cliente'),
             email_cliente:  request.input('email_cliente')

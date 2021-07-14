@@ -16,6 +16,11 @@ h2 {
 	height: 50px;
 	
 }
+.aside{
+
+	margin-left: 600px;
+	margin-top: -600px;
+}
 figcaption{
 	/*Define o tamanho da fonte padrão para legenda das minhas imagens*/
 	font-size: 14px;
@@ -41,4 +46,7 @@ figcaption{
 	display: flex;
 	margin-top: 30px;
 
+}
+#fonte{
+	display: flex;
 }

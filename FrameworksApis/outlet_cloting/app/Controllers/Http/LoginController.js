@@ -10,7 +10,7 @@ const { validate } = use('Validator')
 
 
 class LoginController {
-
+/*
     async store ({ request, response }) {
         const data = request.only(['email', 'username', 'password']);
         
@@ -41,7 +41,7 @@ class LoginController {
         }
         
         }
-
+*/
     async login ( {view}  ) { 
         console.log("Tela de login")
         return view.render("login")

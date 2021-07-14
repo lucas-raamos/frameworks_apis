@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Casacos</title>
+    {{ style('principal')}}
+    {{ style('casaco-edite')}}
+</head>
+    <body>
+        <div id="container">
+        <header class="headerRoupas">
+            <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+            <h1>Bem vindo Adm!!{{email}}</h1>
+            <nav>
+                    <a href="/calcas">Calças</a>
+                    <a href="/camisetas">Camisetas</a>
+                    <a href="/casacos">Casacos</a>
+                    <a href="/sair">Sair</a>
+            </nav>
+        </header>
+       <main>
+        <table>
+            <td>
+        
+                <h1>Editando Casaco</h1>
+                <form method="GET" action="casaco-edite/{{casacos.id}}">
+                {{ csrfField() }}
+                <label for="marca_casaco">Nova Marca:</label>
+                <input type="text" id="marca_casaco" name ="marca_casaco">
+                <br><br>
+                <label for="tamanho_casaco">Novo Tamanho:</label>
+                <input type="text" id="tamanho_casaco" name = "tamanho_casaco">
+                <br><br>
+                <label for="qtd_casaco">Nova Quantidade:</label>
+                <input type="text" id="qtd_casaco" name="qtd_casaco">
+                <br><br>
+
+                  <button type="submit" onclick="editar()" class="button is-danger is-outlined">
+                      <span class="icon is-small">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                      </span>
+                      
+                      <span>Editar</span>
+              </form>
+          </td>
+        </table>
+        </main>
+          <footer class="footer">
+            
+            <p>Copyright @Lucas Ramos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+        </footer>
+    </body>
+ <script>
+        function editar()
+        {
+        alert("Casaco alterado!");
+        }
+</script>
+</html>

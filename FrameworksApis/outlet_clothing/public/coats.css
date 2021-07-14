@@ -1,0 +1,87 @@
+main {
+	width:670px;
+	
+	height: 100%;
+	}
+
+
+h2 {
+	margin-top: 0;
+	font-size:40px;
+	text-align: center;
+	background-color: black;
+	color: wheat;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
+	height: 50px;
+
+}
+figcaption{
+	/*Define o tamanho da fonte padrão para legenda das minhas imagens*/
+	font-size: 14px;
+	/*fonte, fonte, família*/
+	font-family: 'arial',verdana, sans-serif;
+	/*Alinhamento das legendas das imagens*/
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	text-indent: 0;
+}
+.sessaocasacos{
+	/*Alinhamento da descrição*/
+	text-align: center;
+	display: flex;
+	margin-left: 5px;
+
+
+	
+	
+}
+.sessaocasacos2{
+	/*Alinhamento da descrição*/
+	text-align: center;
+	display: flex;
+	margin-left: 5px;
+	
+}
+
+
+
+.casaco{
+	margin-top:  20px;
+    margin-bottom: 30px;
+    display: flex;
+    background-color:white;
+    width:700px;
+    margin-left: 25px;
+    padding:10px;
+    font-family:'Arial black', sans-serif;
+    /*Borda*/
+    border:1px solid black;
+    /*Sombra da borda*/
+    box-shadow:5px 5px 3px rgba(0,0,0,0.7);
+    
+}
+.sessaocasacos3{
+	/*alinhamento da descrição */
+	text-align: center;
+	margin-top: 20px;
+	
+	margin-left: 110px;
+}
+figure{
+	padding:20px;
+}
+figcaption{
+	margin-top: 10px;
+	font-size: 14px;
+	color: black;
+	text-align: center;
+
+}
+
+#legenda{
+	color:black;
+}
+#legenda1{
+	color: black;
+}

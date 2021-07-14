@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="vueCss/vueFunc.css">
+    
+    <title>Funcionarios</title>
+    
+    
+</head>
+<body>
+    <div id="container">
+        <header class="headerFuncionarios">
+        <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+    
+        <h1>Bem vindo Adm!!{{email}}</h1>
+        <nav>
+                <a href="/camisetas">Estoque</a>
+                <a href="/sair">Sair</a>
+    
+        </header>
+     <main>   
+    <h1> Cadastro de Funcionaros</h1>
+    <form action = "/funcionarios" method = "POST" class= "form_funcionario">
+        {{ csrfField() }}
+    <div id="cadastro">
+        <form-funcionarios :funcionario="novoFuncionario" v-on:salvar="addFuncionario"></form-funcionarios>
+        <br />
+        <tabela-funcionarios :funcionarios="listaFuncionarios"></tabela-funcionarios>
+    </div>
+    </form>
+     </main>
+     <footer class="footer">
+   
+        <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="componentes/form-funcionarios.js"></script>
+<script src="componentes/tabela-funcionarios.js"></script>
+<script src="vueFunc.js"></script>
+</html>

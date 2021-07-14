@@ -1,0 +1,67 @@
+main {
+	width:670px;
+	margin: 20px 10px 50px 50px;	
+	float:left;
+	height: 100%;
+	}
+
+
+h2 {
+	margin-top: 0;
+	font-size:40px;
+	text-align: center;
+	background-color: black;
+	color: wheat;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
+	height: 50px;
+	
+}
+
+.produtospromocionais{
+	/*Essa propriedade faz com que o elemento tenda à ficar alinhado à esquerda permitindo que os demais elementos sejam alocados ao seu lado*/
+	float: left;
+	/*Alinhamento da descrição*/
+	text-align: center;
+	/*Para as imagens ficarem uma ao lado da outra*/
+	display: flex;
+	width: 0px;
+	background-color: #ffffff;
+	margin-left: 25px;
+}
+
+figure{
+	/*Define a margin area na parte inferior de um elemento*/
+	margin-bottom: 90px;
+}
+
+figcaption{
+	/*Define o tamanho da fonte padrão para legenda das minhas imagens*/
+	font-size: 14px;
+	/*fonte, fonte, família*/
+	font-family: 'arial',verdana, sans-serif;
+	/*Alinhamento das legendas das imagens*/
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	text-indent: 0;
+}
+
+.produtospromocionais2{
+	float: left;
+	margin-top: 350px;
+	display: flex;
+	/*alinhamento da descrição */
+	text-align: center;
+	width: 0px;
+	background-color: #ffffff;
+}
+
+.produtospromocionais3{
+	float: left;
+	margin-top: 700px;
+	display: flex;
+	/*alinhamento da descrição */
+	text-align: center;
+	width: 0px;
+	background-color: #ffffff;
+}

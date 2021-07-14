@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato</title>
+    {{ style ('principal')}}
+    {{ style ('contato')}}
+
+</head>
+
+<body>
+    <div id="container">
+    <header>
+    <div class="barra"><p>OUTLET ©️LOTHING CENTER</p></div>
+
+    <h1>Bem vindo Adm!!{{email}}</h1>
+    <nav>
+        <a href="/bemvindo">Inicio</a>
+        <a href="/promocoes">Quem somos</a>
+        <a href="/loginadm">Administrador</a>
+        <a href="/login">Logar</a>
+        <br><br>
+        <a href="/trousers">Calças</a>
+        <a href="/shirts">Camisetas</a>
+        <a href="/coats">Casacos</a>
+        <a href="/contato">Fale Conosco</a>
+        <a href="/sair">Sair</a>
+    </nav>
+    </header>
+<main>
+            
+    <div class="contato">
+        <img src="img/contato.png" alt="imagemContato" />
+    </div>
+
+
+<!--<form method="POST" action="processa.php" >-->
+    <form method="get" action=".">
+        <label>Nome:
+        <input name="nome" type="text" id="nome" size="40" /></label>
+        <br><br>
+        <label>Email:
+        <input name="email" type="text" id="email" size="40" /></label>
+        <br><br>
+        <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="20" maxlength="9"
+                   onblur="pesquisacep(this.value);" /></label>
+        <br><br>
+        <label>Bairro:
+        <input name="bairro" type="text" id="bairro" size="20" /></label>
+        <br><br>
+        <label>Cidade:
+        <input name="cidade" type="text" id="cidade" size="20" /></label>
+        <br><br>
+        <label>Rua:
+        <input name="rua" type="text" id="rua" size="20" /></label>
+        <br><br>
+        <label>Estado:
+        <input name="uf" type="text" id="uf" size="20" /></label>
+        <br><br>
+        <label>IBGE:
+        <input name="ibge" type="text" id="ibge" size="20" /></label>
+      </form>
+</form>
+
+<input class="botao" type="submit" name="btn" onclick="funcao1()" value="Enviar">
+
+</main>
+<footer id="rodape">
+    <p>Copyright @LucasRamos - 35.988.777/0001-33 - 2021 - Todos os direitos reservados</p>
+</footer>
+</div>
+</body>
+<script>
+function funcao1()
+{
+alert("Mensagem enviada!!!");
+}
+</script>
+<script>
+    
+    function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('uf').value=("");
+            document.getElementById('ibge').value=("");
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('uf').value=(conteudo.uf);
+            document.getElementById('ibge').value=(conteudo.ibge);
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+        
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('uf').value="...";
+                document.getElementById('ibge').value="...";
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+
+    </script>
+
+
+</html>

@@ -1,0 +1,52 @@
+main {
+	width:670px;
+	margin: 20px 10px 50px 50px;	
+	float:left;
+	height: 100%;
+	}
+
+
+h2 {
+	margin-top: 0;
+	font-size:40px;
+	text-align: center;
+	background-color: black;
+	color: wheat;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
+	height: 50px;
+	
+}
+.aside{
+
+	margin-left: 600px;
+	margin-top: -600px;
+}
+figcaption{
+	/*Define o tamanho da fonte padrão para legenda das minhas imagens*/
+	font-size: 14px;
+	/*fonte, fonte, família*/
+	font-family: 'arial',verdana, sans-serif;
+	/*Alinhamento das legendas das imagens*/
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	text-indent: 0;
+}
+.sessaolancamentos{
+	display: flex;
+	margin-left: 15px;
+
+}
+.sessaolancamentos2{
+	display: flex;
+	margin-left: 15px;
+	margin-top: 30px;
+}
+.sessaolancamentos3{
+	display: flex;
+	margin-top: 30px;
+
+}
+#fonte{
+	display: flex;
+}

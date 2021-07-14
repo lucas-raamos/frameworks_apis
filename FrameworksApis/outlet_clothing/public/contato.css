@@ -1,0 +1,33 @@
+main {
+	width:670px;
+	
+	height: 100%;
+
+	}
+
+.contato img{
+	margin-top: 20px;
+	width: 600px;
+	margin-left: 200px;
+
+}
+form{
+	margin-left: 20px;
+	padding: 20px;
+}
+label{
+    float: left;
+	
+
+  }
+
+
+.botao{
+	margin-top: 2px;
+	margin-left: 20px;
+}
+h2 {
+	font-size:20px;
+}
+
+

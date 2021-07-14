@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+body {
+
+  background-image: url("./img/fundo.png");
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header {
+	position:relative;
+	width:980px;
+	height:140px;
+	background: grey;
+	}
+
+h1{
+  margin-top: 35px;
+  text-align: center;
+  background-color: gray;
+
+}
+ p{
+   color:whitesmoke;
+   text-align: right;
+   margin-right: 40px;
+   margin-top: 0px;
+ }
+
+.barra {
+  color: aliceblue;
+  text-align: right;
+  font-size: 30px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+}
+#container{
+	/*Definição do layout semi-fluido, onde o maximo de largura suportado será 980px e o minímo será 800px; */
+	width: 980px;
+  	margin: 0 auto;
+	background-color: #c0c0c0;
+	margin: auto;
+	
+}
+main{
+  height: 495px;
+
+}
+
+nav {
+	top:75px;
+	margin:0; 
+	padding:0;
+	text-shadow:whitesmoke 0.1em 0.1em 0.2em;
+	
+	} 
+nav a { 
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 30px;
+	
+	}
+
+footer {
+	height:25px;
+	clear:both;
+	background:rgb(170, 162, 147);
+	}
+footer p {
+	margin-left: 50px;
+	font-size:14px;
+	line-height:2;
+	}
+footer p span {
+	color: grey;
+	font-weight:bold;
+	}
+.headerRoupas{
+	height: 100px;
+}
+.menuEdite{
+    padding: 70px;
+  
+}

@@ -1,0 +1,47 @@
+{
+  "camisetas": [
+    {
+      "id": 1,
+      "marca_camiseta": "adidas",
+      "tamanho_camiseta": "P",
+      "preco_camiseta": "150",
+      "qtd_camiseta": "1"
+    },
+    {
+        "id": 2,
+        "marca_camiseta": "adidas2",
+        "tamanho_camiseta": "M",
+        "preco_camiseta": "250",
+        "qtd_camiseta": "2"
+      },
+      {
+        "id": 1,
+        "marca_camiseta": "adidas3",
+        "tamanho_camiseta": "G",
+        "preco_camiseta": "350",
+        "qtd_camiseta": "3"
+      },
+      {
+        "id": 1,
+        "marca_camiseta": "adidas4",
+        "tamanho_camiseta": "P",
+        "preco_camiseta": "450",
+        "qtd_camiseta": "4"
+      },
+      {
+        "id": 1,
+        "marca_camiseta": "adidas5",
+        "tamanho_camiseta": "M",
+        "preco_camiseta": "550",
+        "qtd_camiseta": "5"
+      },
+      {
+        "id": 1,
+        "marca_camiseta": "adidas",
+        "tamanho_camiseta": "G",
+        "preco_camiseta": "650",
+        "qtd_camiseta": "6"
+      }
+  
+  ]
+}

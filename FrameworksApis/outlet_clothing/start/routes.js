@@ -3,6 +3,7 @@
 const LoginController = require('../app/Controllers/Http/LoginController')
 const ClienteController = require('../app/Controllers/Http/ClienteController')
 const AdmController = require('../app/Controllers/Http/AdmController')
+const CamisetasApiController = require('../app/Controllers/Http/CamisetasApiController')
 
 
 /*
@@ -20,6 +21,9 @@ const AdmController = require('../app/Controllers/Http/AdmController')
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
+
+
+
 
 Route.on('/').render('bemvindo')
 Route.get("/" ,'LoginController.login')
@@ -93,3 +97,5 @@ Route.post('promocoes', 'ClienteController.addpromocoes')
 //Fale conosco
 Route.get('contato', 'ClienteController.contato')
 
+//APi
+Route.resource('/api/camisetas' , 'CamisetasApiController').apiOnly();
